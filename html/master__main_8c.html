@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>2015_Ateam_Main: master_main.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">2015_Ateam_Main
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>大域各種</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>マクロ定義</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">master_main.c ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;htc.h&gt;</code><br/>
+<code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &lt;stdlib.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="_system_8h_source.html">System.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_u_a_r_t_8h_source.html">UART.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_i2_c_8h_source.html">I2C.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_ctrl___dataformat_8h_source.html">Ctrl_Dataformat.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_slave___driver_8h_source.html">Slave_Driver.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_tmr0_8h_source.html">Tmr0.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_tmr1_8h_source.html">Tmr1.h</a>&quot;</code><br/>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a024148e99a7143db044a48216664d03d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="master__main_8c.html#a024148e99a7143db044a48216664d03d">_XTAL_FREQ</a>&#160;&#160;&#160;32000000</td></tr>
+<tr class="separator:a024148e99a7143db044a48216664d03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a61b2aea8e4b8ee89313e1d26b17b31f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="master__main_8c.html#a61b2aea8e4b8ee89313e1d26b17b31f1">__CONFIG</a> (FOSC_INTOSC &amp;WDTE_ON &amp;PWRTE_ON &amp;MCLRE_OFF &amp;CP_OFF &amp;CPD_OFF &amp;BOREN_ON &amp;CLKOUTEN_OFF &amp;IESO_OFF &amp;FCMEN_OFF &amp;WRT_OFF &amp;VCAPEN_OFF &amp;PLLEN_ON &amp;STVREN_OFF &amp;LVP_OFF)</td></tr>
+<tr class="separator:a61b2aea8e4b8ee89313e1d26b17b31f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e748dd7ac2bd14f5b8603c655403800"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="master__main_8c.html#a5e748dd7ac2bd14f5b8603c655403800">__IDLOC</a> (1056)</td></tr>
+<tr class="separator:a5e748dd7ac2bd14f5b8603c655403800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc70164c232cee70941b16e3f2ca029a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="master__main_8c.html#afc70164c232cee70941b16e3f2ca029a">pic_init</a> (void)</td></tr>
+<tr class="separator:afc70164c232cee70941b16e3f2ca029a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e195c9f827c37d55920a942920de0f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="master__main_8c.html#a0e195c9f827c37d55920a942920de0f0">putch</a> (char m)</td></tr>
+<tr class="separator:a0e195c9f827c37d55920a942920de0f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a6a5915cb45d514545fe87198bd8d8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="master__main_8c.html#a8a6a5915cb45d514545fe87198bd8d8f">Ctrl_Main</a> (unsigned char *prcdat)</td></tr>
+<tr class="separator:a8a6a5915cb45d514545fe87198bd8d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00a7ae12b0b5ddd038bc1fca50ebd916"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="master__main_8c.html#a00a7ae12b0b5ddd038bc1fca50ebd916">Led_Flu</a> (void)</td></tr>
+<tr class="separator:a00a7ae12b0b5ddd038bc1fca50ebd916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7bec00efab57f48103a6fa226e69e24"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="master__main_8c.html#af7bec00efab57f48103a6fa226e69e24">Calu_Speed</a> (signed char y)</td></tr>
+<tr class="separator:af7bec00efab57f48103a6fa226e69e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6288eba0f8e8ad3ab1544ad731eb7667"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="master__main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667">main</a> (void)</td></tr>
+<tr class="separator:a6288eba0f8e8ad3ab1544ad731eb7667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8968a8f1c5005d36f4cec1c152536463"><td class="memItemLeft" align="right" valign="top">void interrupt&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="master__main_8c.html#a8968a8f1c5005d36f4cec1c152536463">common_inter</a> (void)</td></tr>
+<tr class="separator:a8968a8f1c5005d36f4cec1c152536463"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a28706640140cc1c7d9cf809e302de19b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="master__main_8c.html#a28706640140cc1c7d9cf809e302de19b">Fp_X</a></td></tr>
+<tr class="separator:a28706640140cc1c7d9cf809e302de19b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04595b79e5abd764e54c03a399826bc5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="master__main_8c.html#a04595b79e5abd764e54c03a399826bc5">Fp_Y</a></td></tr>
+<tr class="separator:a04595b79e5abd764e54c03a399826bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b715b6b7dd860db8440672a0ca1327a"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="master__main_8c.html#a6b715b6b7dd860db8440672a0ca1327a">phase</a></td></tr>
+<tr class="separator:a6b715b6b7dd860db8440672a0ca1327a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af561fd578dbb57560c29c8cb102833cf"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="master__main_8c.html#af561fd578dbb57560c29c8cb102833cf">Shot_flg</a></td></tr>
+<tr class="separator:af561fd578dbb57560c29c8cb102833cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a38559d0dcd966409ed9f14bd4a0888"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="master__main_8c.html#a7a38559d0dcd966409ed9f14bd4a0888">ZoneFlag</a></td></tr>
+<tr class="separator:a7a38559d0dcd966409ed9f14bd4a0888"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e750bfbfbd675b586435aac683519e4"><td class="memItemLeft" align="right" valign="top">bit&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="master__main_8c.html#a7e750bfbfbd675b586435aac683519e4">keepflag</a></td></tr>
+<tr class="separator:a7e750bfbfbd675b586435aac683519e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a class="anchor" id="a024148e99a7143db044a48216664d03d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _XTAL_FREQ&#160;&#160;&#160;32000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a class="anchor" id="a61b2aea8e4b8ee89313e1d26b17b31f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__CONFIG </td>
+          <td>(</td>
+          <td class="paramtype">FOSC_INTOSC &amp;WDTE_ON &amp;PWRTE_ON &amp;MCLRE_OFF &amp;CP_OFF &amp;CPD_OFF &amp;BOREN_ON &amp;CLKOUTEN_OFF &amp;IESO_OFF &amp;FCMEN_OFF &amp;WRT_OFF &amp;VCAPEN_OFF &amp;PLLEN_ON &amp;STVREN_OFF &amp;&#160;</td>
+          <td class="paramname"><em>LVP_OFF</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5e748dd7ac2bd14f5b8603c655403800"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__IDLOC </td>
+          <td>(</td>
+          <td class="paramtype">1056&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af7bec00efab57f48103a6fa226e69e24"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Calu_Speed </td>
+          <td>(</td>
+          <td class="paramtype">signed char&#160;</td>
+          <td class="paramname"><em>y</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8968a8f1c5005d36f4cec1c152536463"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void interrupt common_inter </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8a6a5915cb45d514545fe87198bd8d8f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ctrl_Main </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>prcdat</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a00a7ae12b0b5ddd038bc1fca50ebd916"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Led_Flu </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6288eba0f8e8ad3ab1544ad731eb7667"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afc70164c232cee70941b16e3f2ca029a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pic_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0e195c9f827c37d55920a942920de0f0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void putch </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a class="anchor" id="a28706640140cc1c7d9cf809e302de19b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Fp_X</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a04595b79e5abd764e54c03a399826bc5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Fp_Y</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7e750bfbfbd675b586435aac683519e4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bit keepflag</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6b715b6b7dd860db8440672a0ca1327a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char phase</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af561fd578dbb57560c29c8cb102833cf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char Shot_flg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7a38559d0dcd966409ed9f14bd4a0888"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char ZoneFlag</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2015年10月03日(土) 16時09分52秒作成 - 2015_Ateam_Main / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

@@ -1,0 +1,108 @@
+\hypertarget{_i2_c_8h}{\section{I2\-C.\-h ファイル}
+\label{_i2_c_8h}\index{I2\-C.\-h@{I2\-C.\-h}}
+}
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_i2_c_8h_a76ce7554d90d5f4dc396057f5c6e69f2}{Master}
+\item 
+\#define \hyperlink{_i2_c_8h_ac6c5024d278df65d4ca51ff43fba8185}{pin\-Mode\-S\-C\-K}~T\-R\-I\-S\-Cbits.\-T\-R\-I\-S\-C3
+\item 
+\#define \hyperlink{_i2_c_8h_a6a88cab5321a5e93de12649684bb931f}{pin\-Mode\-S\-D\-A}~T\-R\-I\-S\-Cbits.\-T\-R\-I\-S\-C4
+\item 
+\#define \hyperlink{_i2_c_8h_aa78cfc2b65fadf2b15815d8584938189}{S\-N\-D\-\_\-\-D\-A\-T\-A\-\_\-\-L\-E\-N}~8
+\item 
+\#define \hyperlink{_i2_c_8h_aac8019056a416d64a6d37a0e7ff64b57}{R\-C\-V\-\_\-\-D\-A\-T\-A\-\_\-\-L\-E\-N}~8
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_i2_c_8h_a9f7d0ddbdded6ab554f3afa107a2f35e}{Master\-\_\-\-Interrupt} (void)
+\item 
+int \hyperlink{_i2_c_8h_a7165f87efd1e28cd9c2d6f7704fe9886}{I2\-C\-\_\-\-Send} (unsigned char adrs, int len, unsigned char $\ast$buf)
+\item 
+int \hyperlink{_i2_c_8h_ac2cf125a277204d1443dfb2698620401}{I2\-C\-\_\-\-Receive} (unsigned char adrs, int len, unsigned char $\ast$buf)
+\item 
+void \hyperlink{_i2_c_8h_a22ac782d7513492c2d71d1962c8e0f1b}{I2\-C\-\_\-\-Idle\-Check} (char mask)
+\item 
+void \hyperlink{_i2_c_8h_ac89f7da844c617165504849a13096b30}{I2\-C\-\_\-init} (unsigned char speed)
+\end{DoxyCompactItemize}
+\subsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \hyperlink{_i2_c_8h_a87e9fd7f97d5ca8f21be3157fa46c9c9}{rcv\-\_\-data} \mbox{[}\hyperlink{_i2_c_8h_aac8019056a416d64a6d37a0e7ff64b57}{R\-C\-V\-\_\-\-D\-A\-T\-A\-\_\-\-L\-E\-N}\mbox{]}
+\item 
+unsigned char \hyperlink{_i2_c_8h_ad3100a419ea5a2bc714fdb35eecdf4ef}{snd\-\_\-data} \mbox{[}\hyperlink{_i2_c_8h_aa78cfc2b65fadf2b15815d8584938189}{S\-N\-D\-\_\-\-D\-A\-T\-A\-\_\-\-L\-E\-N}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{マクロ定義詳解}
+\hypertarget{_i2_c_8h_a76ce7554d90d5f4dc396057f5c6e69f2}{\index{I2\-C.\-h@{I2\-C.\-h}!Master@{Master}}
+\index{Master@{Master}!I2C.h@{I2\-C.\-h}}
+\subsubsection[{Master}]{\setlength{\rightskip}{0pt plus 5cm}\#define Master}}\label{_i2_c_8h_a76ce7554d90d5f4dc396057f5c6e69f2}
+\hypertarget{_i2_c_8h_ac6c5024d278df65d4ca51ff43fba8185}{\index{I2\-C.\-h@{I2\-C.\-h}!pin\-Mode\-S\-C\-K@{pin\-Mode\-S\-C\-K}}
+\index{pin\-Mode\-S\-C\-K@{pin\-Mode\-S\-C\-K}!I2C.h@{I2\-C.\-h}}
+\subsubsection[{pin\-Mode\-S\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define pin\-Mode\-S\-C\-K~T\-R\-I\-S\-Cbits.\-T\-R\-I\-S\-C3}}\label{_i2_c_8h_ac6c5024d278df65d4ca51ff43fba8185}
+\hypertarget{_i2_c_8h_a6a88cab5321a5e93de12649684bb931f}{\index{I2\-C.\-h@{I2\-C.\-h}!pin\-Mode\-S\-D\-A@{pin\-Mode\-S\-D\-A}}
+\index{pin\-Mode\-S\-D\-A@{pin\-Mode\-S\-D\-A}!I2C.h@{I2\-C.\-h}}
+\subsubsection[{pin\-Mode\-S\-D\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define pin\-Mode\-S\-D\-A~T\-R\-I\-S\-Cbits.\-T\-R\-I\-S\-C4}}\label{_i2_c_8h_a6a88cab5321a5e93de12649684bb931f}
+\hypertarget{_i2_c_8h_aac8019056a416d64a6d37a0e7ff64b57}{\index{I2\-C.\-h@{I2\-C.\-h}!R\-C\-V\-\_\-\-D\-A\-T\-A\-\_\-\-L\-E\-N@{R\-C\-V\-\_\-\-D\-A\-T\-A\-\_\-\-L\-E\-N}}
+\index{R\-C\-V\-\_\-\-D\-A\-T\-A\-\_\-\-L\-E\-N@{R\-C\-V\-\_\-\-D\-A\-T\-A\-\_\-\-L\-E\-N}!I2C.h@{I2\-C.\-h}}
+\subsubsection[{R\-C\-V\-\_\-\-D\-A\-T\-A\-\_\-\-L\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-C\-V\-\_\-\-D\-A\-T\-A\-\_\-\-L\-E\-N~8}}\label{_i2_c_8h_aac8019056a416d64a6d37a0e7ff64b57}
+\hypertarget{_i2_c_8h_aa78cfc2b65fadf2b15815d8584938189}{\index{I2\-C.\-h@{I2\-C.\-h}!S\-N\-D\-\_\-\-D\-A\-T\-A\-\_\-\-L\-E\-N@{S\-N\-D\-\_\-\-D\-A\-T\-A\-\_\-\-L\-E\-N}}
+\index{S\-N\-D\-\_\-\-D\-A\-T\-A\-\_\-\-L\-E\-N@{S\-N\-D\-\_\-\-D\-A\-T\-A\-\_\-\-L\-E\-N}!I2C.h@{I2\-C.\-h}}
+\subsubsection[{S\-N\-D\-\_\-\-D\-A\-T\-A\-\_\-\-L\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-N\-D\-\_\-\-D\-A\-T\-A\-\_\-\-L\-E\-N~8}}\label{_i2_c_8h_aa78cfc2b65fadf2b15815d8584938189}
+
+
+\subsection{関数詳解}
+\hypertarget{_i2_c_8h_a22ac782d7513492c2d71d1962c8e0f1b}{\index{I2\-C.\-h@{I2\-C.\-h}!I2\-C\-\_\-\-Idle\-Check@{I2\-C\-\_\-\-Idle\-Check}}
+\index{I2\-C\-\_\-\-Idle\-Check@{I2\-C\-\_\-\-Idle\-Check}!I2C.h@{I2\-C.\-h}}
+\subsubsection[{I2\-C\-\_\-\-Idle\-Check}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-\-Idle\-Check (
+\begin{DoxyParamCaption}
+\item[{char}]{mask}
+\end{DoxyParamCaption}
+)}}\label{_i2_c_8h_a22ac782d7513492c2d71d1962c8e0f1b}
+
+\begin{DoxyItemize}
+\item \hyperlink{_i2_c_8c_a22ac782d7513492c2d71d1962c8e0f1b}{I2\-C\-\_\-\-Idle\-Check(char mask)} \-: アイドル状態のチェック $\ast$/ 
+\end{DoxyItemize}\hypertarget{_i2_c_8h_ac89f7da844c617165504849a13096b30}{\index{I2\-C.\-h@{I2\-C.\-h}!I2\-C\-\_\-init@{I2\-C\-\_\-init}}
+\index{I2\-C\-\_\-init@{I2\-C\-\_\-init}!I2C.h@{I2\-C.\-h}}
+\subsubsection[{I2\-C\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{speed}
+\end{DoxyParamCaption}
+)}}\label{_i2_c_8h_ac89f7da844c617165504849a13096b30}
+\hypertarget{_i2_c_8h_ac2cf125a277204d1443dfb2698620401}{\index{I2\-C.\-h@{I2\-C.\-h}!I2\-C\-\_\-\-Receive@{I2\-C\-\_\-\-Receive}}
+\index{I2\-C\-\_\-\-Receive@{I2\-C\-\_\-\-Receive}!I2C.h@{I2\-C.\-h}}
+\subsubsection[{I2\-C\-\_\-\-Receive}]{\setlength{\rightskip}{0pt plus 5cm}int I2\-C\-\_\-\-Receive (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{adrs, }
+\item[{int}]{len, }
+\item[{unsigned char $\ast$}]{buf}
+\end{DoxyParamCaption}
+)}}\label{_i2_c_8h_ac2cf125a277204d1443dfb2698620401}
+\hypertarget{_i2_c_8h_a7165f87efd1e28cd9c2d6f7704fe9886}{\index{I2\-C.\-h@{I2\-C.\-h}!I2\-C\-\_\-\-Send@{I2\-C\-\_\-\-Send}}
+\index{I2\-C\-\_\-\-Send@{I2\-C\-\_\-\-Send}!I2C.h@{I2\-C.\-h}}
+\subsubsection[{I2\-C\-\_\-\-Send}]{\setlength{\rightskip}{0pt plus 5cm}int I2\-C\-\_\-\-Send (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{adrs, }
+\item[{int}]{len, }
+\item[{unsigned char $\ast$}]{buf}
+\end{DoxyParamCaption}
+)}}\label{_i2_c_8h_a7165f87efd1e28cd9c2d6f7704fe9886}
+\hypertarget{_i2_c_8h_a9f7d0ddbdded6ab554f3afa107a2f35e}{\index{I2\-C.\-h@{I2\-C.\-h}!Master\-\_\-\-Interrupt@{Master\-\_\-\-Interrupt}}
+\index{Master\-\_\-\-Interrupt@{Master\-\_\-\-Interrupt}!I2C.h@{I2\-C.\-h}}
+\subsubsection[{Master\-\_\-\-Interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void Master\-\_\-\-Interrupt (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_i2_c_8h_a9f7d0ddbdded6ab554f3afa107a2f35e}
+
+
+\subsection{変数詳解}
+\hypertarget{_i2_c_8h_a87e9fd7f97d5ca8f21be3157fa46c9c9}{\index{I2\-C.\-h@{I2\-C.\-h}!rcv\-\_\-data@{rcv\-\_\-data}}
+\index{rcv\-\_\-data@{rcv\-\_\-data}!I2C.h@{I2\-C.\-h}}
+\subsubsection[{rcv\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char rcv\-\_\-data\mbox{[}{\bf R\-C\-V\-\_\-\-D\-A\-T\-A\-\_\-\-L\-E\-N}\mbox{]}}}\label{_i2_c_8h_a87e9fd7f97d5ca8f21be3157fa46c9c9}
+\hypertarget{_i2_c_8h_ad3100a419ea5a2bc714fdb35eecdf4ef}{\index{I2\-C.\-h@{I2\-C.\-h}!snd\-\_\-data@{snd\-\_\-data}}
+\index{snd\-\_\-data@{snd\-\_\-data}!I2C.h@{I2\-C.\-h}}
+\subsubsection[{snd\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char snd\-\_\-data\mbox{[}{\bf S\-N\-D\-\_\-\-D\-A\-T\-A\-\_\-\-L\-E\-N}\mbox{]}}}\label{_i2_c_8h_ad3100a419ea5a2bc714fdb35eecdf4ef}

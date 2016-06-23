@@ -1,0 +1,104 @@
+\hypertarget{_i2_c_8c}{\section{I2\-C.\-c ファイル}
+\label{_i2_c_8c}\index{I2\-C.\-c@{I2\-C.\-c}}
+}
+{\ttfamily \#include $<$htc.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}I2\-C.\-h\char`\"{}}\\*
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_i2_c_8c_ac89f7da844c617165504849a13096b30}{I2\-C\-\_\-init} (unsigned char speed)
+\item 
+void \hyperlink{_i2_c_8c_a9f7d0ddbdded6ab554f3afa107a2f35e}{Master\-\_\-\-Interrupt} (void)
+\item 
+int \hyperlink{_i2_c_8c_a7165f87efd1e28cd9c2d6f7704fe9886}{I2\-C\-\_\-\-Send} (unsigned char adrs, int len, unsigned char $\ast$buf)
+\item 
+int \hyperlink{_i2_c_8c_ac2cf125a277204d1443dfb2698620401}{I2\-C\-\_\-\-Receive} (unsigned char adrs, int len, unsigned char $\ast$buf)
+\item 
+void \hyperlink{_i2_c_8c_a22ac782d7513492c2d71d1962c8e0f1b}{I2\-C\-\_\-\-Idle\-Check} (char mask)
+\end{DoxyCompactItemize}
+\subsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \hyperlink{_i2_c_8c_a87e9fd7f97d5ca8f21be3157fa46c9c9}{rcv\-\_\-data} \mbox{[}\hyperlink{_i2_c_8h_aac8019056a416d64a6d37a0e7ff64b57}{R\-C\-V\-\_\-\-D\-A\-T\-A\-\_\-\-L\-E\-N}\mbox{]}
+\item 
+unsigned char \hyperlink{_i2_c_8c_ad3100a419ea5a2bc714fdb35eecdf4ef}{snd\-\_\-data} \mbox{[}\hyperlink{_i2_c_8h_aa78cfc2b65fadf2b15815d8584938189}{S\-N\-D\-\_\-\-D\-A\-T\-A\-\_\-\-L\-E\-N}\mbox{]}
+\item 
+unsigned int \hyperlink{_i2_c_8c_a6098513f8098ac38ae61b9101d3e6d6a}{rcv\-\_\-flg}
+\item 
+unsigned char $\ast$ \hyperlink{_i2_c_8c_a72df798e8caa5e4b77436fdda33f1c6f}{Sdtp}
+\item 
+unsigned char $\ast$ \hyperlink{_i2_c_8c_a39b6b9808cd066c412a625fbe30dc1f5}{Rdtp}
+\item 
+int \hyperlink{_i2_c_8c_a0a174c90f4a98b7ad883a72eb038322f}{Ack\-Check}
+\item 
+int \hyperlink{_i2_c_8c_a6538a52840afd2ad6aba6a1ea5d89e50}{success}
+\end{DoxyCompactItemize}
+
+
+\subsection{関数詳解}
+\hypertarget{_i2_c_8c_a22ac782d7513492c2d71d1962c8e0f1b}{\index{I2\-C.\-c@{I2\-C.\-c}!I2\-C\-\_\-\-Idle\-Check@{I2\-C\-\_\-\-Idle\-Check}}
+\index{I2\-C\-\_\-\-Idle\-Check@{I2\-C\-\_\-\-Idle\-Check}!I2C.c@{I2\-C.\-c}}
+\subsubsection[{I2\-C\-\_\-\-Idle\-Check}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-\-Idle\-Check (
+\begin{DoxyParamCaption}
+\item[{char}]{mask}
+\end{DoxyParamCaption}
+)}}\label{_i2_c_8c_a22ac782d7513492c2d71d1962c8e0f1b}
+
+\begin{DoxyItemize}
+\item \hyperlink{_i2_c_8c_a22ac782d7513492c2d71d1962c8e0f1b}{I2\-C\-\_\-\-Idle\-Check(char mask)} \-: アイドル状態のチェック $\ast$/ 
+\end{DoxyItemize}\hypertarget{_i2_c_8c_ac89f7da844c617165504849a13096b30}{\index{I2\-C.\-c@{I2\-C.\-c}!I2\-C\-\_\-init@{I2\-C\-\_\-init}}
+\index{I2\-C\-\_\-init@{I2\-C\-\_\-init}!I2C.c@{I2\-C.\-c}}
+\subsubsection[{I2\-C\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{speed}
+\end{DoxyParamCaption}
+)}}\label{_i2_c_8c_ac89f7da844c617165504849a13096b30}
+\hypertarget{_i2_c_8c_ac2cf125a277204d1443dfb2698620401}{\index{I2\-C.\-c@{I2\-C.\-c}!I2\-C\-\_\-\-Receive@{I2\-C\-\_\-\-Receive}}
+\index{I2\-C\-\_\-\-Receive@{I2\-C\-\_\-\-Receive}!I2C.c@{I2\-C.\-c}}
+\subsubsection[{I2\-C\-\_\-\-Receive}]{\setlength{\rightskip}{0pt plus 5cm}int I2\-C\-\_\-\-Receive (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{adrs, }
+\item[{int}]{len, }
+\item[{unsigned char $\ast$}]{buf}
+\end{DoxyParamCaption}
+)}}\label{_i2_c_8c_ac2cf125a277204d1443dfb2698620401}
+\hypertarget{_i2_c_8c_a7165f87efd1e28cd9c2d6f7704fe9886}{\index{I2\-C.\-c@{I2\-C.\-c}!I2\-C\-\_\-\-Send@{I2\-C\-\_\-\-Send}}
+\index{I2\-C\-\_\-\-Send@{I2\-C\-\_\-\-Send}!I2C.c@{I2\-C.\-c}}
+\subsubsection[{I2\-C\-\_\-\-Send}]{\setlength{\rightskip}{0pt plus 5cm}int I2\-C\-\_\-\-Send (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{adrs, }
+\item[{int}]{len, }
+\item[{unsigned char $\ast$}]{buf}
+\end{DoxyParamCaption}
+)}}\label{_i2_c_8c_a7165f87efd1e28cd9c2d6f7704fe9886}
+\hypertarget{_i2_c_8c_a9f7d0ddbdded6ab554f3afa107a2f35e}{\index{I2\-C.\-c@{I2\-C.\-c}!Master\-\_\-\-Interrupt@{Master\-\_\-\-Interrupt}}
+\index{Master\-\_\-\-Interrupt@{Master\-\_\-\-Interrupt}!I2C.c@{I2\-C.\-c}}
+\subsubsection[{Master\-\_\-\-Interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void Master\-\_\-\-Interrupt (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_i2_c_8c_a9f7d0ddbdded6ab554f3afa107a2f35e}
+
+
+\subsection{変数詳解}
+\hypertarget{_i2_c_8c_a0a174c90f4a98b7ad883a72eb038322f}{\index{I2\-C.\-c@{I2\-C.\-c}!Ack\-Check@{Ack\-Check}}
+\index{Ack\-Check@{Ack\-Check}!I2C.c@{I2\-C.\-c}}
+\subsubsection[{Ack\-Check}]{\setlength{\rightskip}{0pt plus 5cm}int Ack\-Check}}\label{_i2_c_8c_a0a174c90f4a98b7ad883a72eb038322f}
+\hypertarget{_i2_c_8c_a87e9fd7f97d5ca8f21be3157fa46c9c9}{\index{I2\-C.\-c@{I2\-C.\-c}!rcv\-\_\-data@{rcv\-\_\-data}}
+\index{rcv\-\_\-data@{rcv\-\_\-data}!I2C.c@{I2\-C.\-c}}
+\subsubsection[{rcv\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char rcv\-\_\-data\mbox{[}{\bf R\-C\-V\-\_\-\-D\-A\-T\-A\-\_\-\-L\-E\-N}\mbox{]}}}\label{_i2_c_8c_a87e9fd7f97d5ca8f21be3157fa46c9c9}
+\hypertarget{_i2_c_8c_a6098513f8098ac38ae61b9101d3e6d6a}{\index{I2\-C.\-c@{I2\-C.\-c}!rcv\-\_\-flg@{rcv\-\_\-flg}}
+\index{rcv\-\_\-flg@{rcv\-\_\-flg}!I2C.c@{I2\-C.\-c}}
+\subsubsection[{rcv\-\_\-flg}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int rcv\-\_\-flg}}\label{_i2_c_8c_a6098513f8098ac38ae61b9101d3e6d6a}
+\hypertarget{_i2_c_8c_a39b6b9808cd066c412a625fbe30dc1f5}{\index{I2\-C.\-c@{I2\-C.\-c}!Rdtp@{Rdtp}}
+\index{Rdtp@{Rdtp}!I2C.c@{I2\-C.\-c}}
+\subsubsection[{Rdtp}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ Rdtp}}\label{_i2_c_8c_a39b6b9808cd066c412a625fbe30dc1f5}
+\hypertarget{_i2_c_8c_a72df798e8caa5e4b77436fdda33f1c6f}{\index{I2\-C.\-c@{I2\-C.\-c}!Sdtp@{Sdtp}}
+\index{Sdtp@{Sdtp}!I2C.c@{I2\-C.\-c}}
+\subsubsection[{Sdtp}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ Sdtp}}\label{_i2_c_8c_a72df798e8caa5e4b77436fdda33f1c6f}
+\hypertarget{_i2_c_8c_ad3100a419ea5a2bc714fdb35eecdf4ef}{\index{I2\-C.\-c@{I2\-C.\-c}!snd\-\_\-data@{snd\-\_\-data}}
+\index{snd\-\_\-data@{snd\-\_\-data}!I2C.c@{I2\-C.\-c}}
+\subsubsection[{snd\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char snd\-\_\-data\mbox{[}{\bf S\-N\-D\-\_\-\-D\-A\-T\-A\-\_\-\-L\-E\-N}\mbox{]}}}\label{_i2_c_8c_ad3100a419ea5a2bc714fdb35eecdf4ef}
+\hypertarget{_i2_c_8c_a6538a52840afd2ad6aba6a1ea5d89e50}{\index{I2\-C.\-c@{I2\-C.\-c}!success@{success}}
+\index{success@{success}!I2C.c@{I2\-C.\-c}}
+\subsubsection[{success}]{\setlength{\rightskip}{0pt plus 5cm}int success}}\label{_i2_c_8c_a6538a52840afd2ad6aba6a1ea5d89e50}

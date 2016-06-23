@@ -1,0 +1,272 @@
+\hypertarget{_slave___driver_8c}{\section{Slave\-\_\-\-Driver.\-c ファイル}
+\label{_slave___driver_8c}\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}}
+}
+{\ttfamily \#include \char`\"{}U\-A\-R\-T.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}I2\-C.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ctrl\-\_\-\-Dataformat.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Tmr0.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Slave\-\_\-\-Driver.\-h\char`\"{}}\\*
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \hyperlink{_slave___driver_8c_acaf5da0b3e946bdbd4565ad2ee8528ae}{Out\-\_\-\-Motor} (unsigned char ch, unsigned char dire, unsigned int Speed)
+\item 
+unsigned char \hyperlink{_slave___driver_8c_aeb81b2b0bd31241653dbbca702e6debd}{Dead\-\_\-\-Stop} (unsigned int Speed)
+\item 
+unsigned char \hyperlink{_slave___driver_8c_ac4c71a2afdef1f25d3a024b462b00a01}{Set\-\_\-\-Str} (unsigned char select, int rad)
+\item 
+unsigned char \hyperlink{_slave___driver_8c_a2ecd70f66e09cd73b2fd7bedfc34cc24}{Encorder\-\_\-\-Str} (unsigned char select, int rad)
+\item 
+unsigned char \hyperlink{_slave___driver_8c_aa466d5cc560140238bc7f86227395cc4}{On\-\_\-\-Valve} (unsigned char select)
+\item 
+unsigned char \hyperlink{_slave___driver_8c_a0e662a03472dea832c49ca6379c8cc8f}{Off\-\_\-\-Valve} (unsigned char select)
+\item 
+unsigned char \hyperlink{_slave___driver_8c_a6926f4897005346717a01418d4e96e27}{Seikimatsu\-\_\-\-O\-N} (void)
+\item 
+unsigned char \hyperlink{_slave___driver_8c_a62c1f58965672b736519063003c51204}{Seikimatsu\-\_\-\-O\-F\-F} (void)
+\item 
+unsigned char \hyperlink{_slave___driver_8c_a98351f31a1f5ea244ca7426a47a7ae93}{System\-\_\-\-Indicater} (unsigned char Color, unsigned char Led\-Stat, unsigned char Brightness)
+\item 
+void \hyperlink{_slave___driver_8c_a6e55d25e76a9d2ff6b54df0b57854739}{System\-\_\-\-Indicater2} (unsigned char data1, unsigned char data2, unsigned char data3, unsigned char data4, unsigned char data5)
+\item 
+unsigned char \hyperlink{_slave___driver_8c_af8927d956ba70a5af1cff85e601e2133}{Set\-\_\-\-Lock} (unsigned int set)
+\item 
+void \hyperlink{_slave___driver_8c_ad64213148e8c0d9faac4fc88815a31b7}{Lock\-\_\-\-On} (void)
+\item 
+void \hyperlink{_slave___driver_8c_a33733decc0c3307000387729e0439850}{Lock\-\_\-\-Acti} (void)
+\item 
+void \hyperlink{_slave___driver_8c_a3c0d2a4492c17d656437f3fac3a6631d}{Side\-\_\-\-On} (void)
+\item 
+void \hyperlink{_slave___driver_8c_acda112be0bf335d094cfc8e9854a5285}{Side\-\_\-\-Acti} (void)
+\item 
+unsigned char \hyperlink{_slave___driver_8c_a6f13e25a0f41498e3f7efb9287b9e682}{Out\-\_\-\-Servo} (unsigned char port, unsigned char rad)
+\item 
+unsigned char \hyperlink{_slave___driver_8c_a5904668adbe4d14ebd15fd3f0ec3a8d6}{Shot\-\_\-\-Stop} (void)
+\item 
+unsigned char \hyperlink{_slave___driver_8c_a396ee1d9a315c9d12806838cb416ddf8}{Shot\-\_\-\-Up} (void)
+\item 
+unsigned char \hyperlink{_slave___driver_8c_a3e4ce957ddd268917aad59ce9f8f99c0}{Shot\-\_\-\-Down} (void)
+\end{DoxyCompactItemize}
+\subsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+bit \hyperlink{_slave___driver_8c_acf3244c673f0315179aa0689ccf084cf}{Shot\-\_\-\-Flg}
+\item 
+bit \hyperlink{_slave___driver_8c_a24193f838beec5538c319082406e95d6}{Sservo}
+\item 
+bit \hyperlink{_slave___driver_8c_a4b23cf26434ca9ed614ec97f3cf59099}{Swait}
+\item 
+bit \hyperlink{_slave___driver_8c_aecf7de3156e8278fe9576be67d74744d}{Sair}
+\item 
+bit \hyperlink{_slave___driver_8c_a626a07f22830b5af687c17e7c08f245b}{Lock\-\_\-\-Flg}
+\item 
+bit \hyperlink{_slave___driver_8c_a54a897fedcd75108d9b703b0f409ad23}{Lock}
+\item 
+bit \hyperlink{_slave___driver_8c_a12dd8a4d2d8efdfc6f57bc1518e6f468}{Lwait}
+\item 
+bit \hyperlink{_slave___driver_8c_a31836e78143e86b37d18e83f435fdcf3}{Lair}
+\item 
+bit \hyperlink{_slave___driver_8c_ad47fab0a72a4dacda43b7ab7954a3737}{Side\-\_\-\-Flg}
+\item 
+bit \hyperlink{_slave___driver_8c_ad10daf33352b177e9139372c43839736}{Sdwait}
+\item 
+bit \hyperlink{_slave___driver_8c_aa9b46b7907b533543248320e078e6f94}{Sdair}
+\item 
+unsigned char \hyperlink{_slave___driver_8c_a6b715b6b7dd860db8440672a0ca1327a}{phase}
+\item 
+unsigned int \hyperlink{_slave___driver_8c_aeaa5322781d08d122fa03aec0ba434db}{Wait\-\_\-count}
+\item 
+unsigned int \hyperlink{_slave___driver_8c_ab13a7dbb446218689b1f9be651cacab7}{Side\-\_\-count}
+\end{DoxyCompactItemize}
+
+
+\subsection{関数詳解}
+\hypertarget{_slave___driver_8c_aeb81b2b0bd31241653dbbca702e6debd}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Dead\-\_\-\-Stop@{Dead\-\_\-\-Stop}}
+\index{Dead\-\_\-\-Stop@{Dead\-\_\-\-Stop}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Dead\-\_\-\-Stop}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Dead\-\_\-\-Stop (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{Speed}
+\end{DoxyParamCaption}
+)}}\label{_slave___driver_8c_aeb81b2b0bd31241653dbbca702e6debd}
+\hypertarget{_slave___driver_8c_a2ecd70f66e09cd73b2fd7bedfc34cc24}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Encorder\-\_\-\-Str@{Encorder\-\_\-\-Str}}
+\index{Encorder\-\_\-\-Str@{Encorder\-\_\-\-Str}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Encorder\-\_\-\-Str}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Encorder\-\_\-\-Str (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{select, }
+\item[{int}]{rad}
+\end{DoxyParamCaption}
+)}}\label{_slave___driver_8c_a2ecd70f66e09cd73b2fd7bedfc34cc24}
+\hypertarget{_slave___driver_8c_a33733decc0c3307000387729e0439850}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Lock\-\_\-\-Acti@{Lock\-\_\-\-Acti}}
+\index{Lock\-\_\-\-Acti@{Lock\-\_\-\-Acti}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Lock\-\_\-\-Acti}]{\setlength{\rightskip}{0pt plus 5cm}void Lock\-\_\-\-Acti (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_slave___driver_8c_a33733decc0c3307000387729e0439850}
+\hypertarget{_slave___driver_8c_ad64213148e8c0d9faac4fc88815a31b7}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Lock\-\_\-\-On@{Lock\-\_\-\-On}}
+\index{Lock\-\_\-\-On@{Lock\-\_\-\-On}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Lock\-\_\-\-On}]{\setlength{\rightskip}{0pt plus 5cm}void Lock\-\_\-\-On (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_slave___driver_8c_ad64213148e8c0d9faac4fc88815a31b7}
+\hypertarget{_slave___driver_8c_a0e662a03472dea832c49ca6379c8cc8f}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Off\-\_\-\-Valve@{Off\-\_\-\-Valve}}
+\index{Off\-\_\-\-Valve@{Off\-\_\-\-Valve}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Off\-\_\-\-Valve}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Off\-\_\-\-Valve (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{select}
+\end{DoxyParamCaption}
+)}}\label{_slave___driver_8c_a0e662a03472dea832c49ca6379c8cc8f}
+\hypertarget{_slave___driver_8c_aa466d5cc560140238bc7f86227395cc4}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!On\-\_\-\-Valve@{On\-\_\-\-Valve}}
+\index{On\-\_\-\-Valve@{On\-\_\-\-Valve}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{On\-\_\-\-Valve}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char On\-\_\-\-Valve (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{select}
+\end{DoxyParamCaption}
+)}}\label{_slave___driver_8c_aa466d5cc560140238bc7f86227395cc4}
+\hypertarget{_slave___driver_8c_acaf5da0b3e946bdbd4565ad2ee8528ae}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Out\-\_\-\-Motor@{Out\-\_\-\-Motor}}
+\index{Out\-\_\-\-Motor@{Out\-\_\-\-Motor}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Out\-\_\-\-Motor}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Out\-\_\-\-Motor (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{ch, }
+\item[{unsigned char}]{dire, }
+\item[{unsigned int}]{Speed}
+\end{DoxyParamCaption}
+)}}\label{_slave___driver_8c_acaf5da0b3e946bdbd4565ad2ee8528ae}
+\hypertarget{_slave___driver_8c_a6f13e25a0f41498e3f7efb9287b9e682}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Out\-\_\-\-Servo@{Out\-\_\-\-Servo}}
+\index{Out\-\_\-\-Servo@{Out\-\_\-\-Servo}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Out\-\_\-\-Servo}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Out\-\_\-\-Servo (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{port, }
+\item[{unsigned char}]{rad}
+\end{DoxyParamCaption}
+)}}\label{_slave___driver_8c_a6f13e25a0f41498e3f7efb9287b9e682}
+\hypertarget{_slave___driver_8c_a62c1f58965672b736519063003c51204}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Seikimatsu\-\_\-\-O\-F\-F@{Seikimatsu\-\_\-\-O\-F\-F}}
+\index{Seikimatsu\-\_\-\-O\-F\-F@{Seikimatsu\-\_\-\-O\-F\-F}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Seikimatsu\-\_\-\-O\-F\-F}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Seikimatsu\-\_\-\-O\-F\-F (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_slave___driver_8c_a62c1f58965672b736519063003c51204}
+\hypertarget{_slave___driver_8c_a6926f4897005346717a01418d4e96e27}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Seikimatsu\-\_\-\-O\-N@{Seikimatsu\-\_\-\-O\-N}}
+\index{Seikimatsu\-\_\-\-O\-N@{Seikimatsu\-\_\-\-O\-N}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Seikimatsu\-\_\-\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Seikimatsu\-\_\-\-O\-N (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_slave___driver_8c_a6926f4897005346717a01418d4e96e27}
+\hypertarget{_slave___driver_8c_af8927d956ba70a5af1cff85e601e2133}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Set\-\_\-\-Lock@{Set\-\_\-\-Lock}}
+\index{Set\-\_\-\-Lock@{Set\-\_\-\-Lock}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Set\-\_\-\-Lock}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Set\-\_\-\-Lock (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{set}
+\end{DoxyParamCaption}
+)}}\label{_slave___driver_8c_af8927d956ba70a5af1cff85e601e2133}
+\hypertarget{_slave___driver_8c_ac4c71a2afdef1f25d3a024b462b00a01}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Set\-\_\-\-Str@{Set\-\_\-\-Str}}
+\index{Set\-\_\-\-Str@{Set\-\_\-\-Str}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Set\-\_\-\-Str}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Set\-\_\-\-Str (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{select, }
+\item[{int}]{rad}
+\end{DoxyParamCaption}
+)}}\label{_slave___driver_8c_ac4c71a2afdef1f25d3a024b462b00a01}
+\hypertarget{_slave___driver_8c_a3e4ce957ddd268917aad59ce9f8f99c0}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Shot\-\_\-\-Down@{Shot\-\_\-\-Down}}
+\index{Shot\-\_\-\-Down@{Shot\-\_\-\-Down}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Shot\-\_\-\-Down}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Shot\-\_\-\-Down (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_slave___driver_8c_a3e4ce957ddd268917aad59ce9f8f99c0}
+\hypertarget{_slave___driver_8c_a5904668adbe4d14ebd15fd3f0ec3a8d6}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Shot\-\_\-\-Stop@{Shot\-\_\-\-Stop}}
+\index{Shot\-\_\-\-Stop@{Shot\-\_\-\-Stop}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Shot\-\_\-\-Stop}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Shot\-\_\-\-Stop (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_slave___driver_8c_a5904668adbe4d14ebd15fd3f0ec3a8d6}
+\hypertarget{_slave___driver_8c_a396ee1d9a315c9d12806838cb416ddf8}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Shot\-\_\-\-Up@{Shot\-\_\-\-Up}}
+\index{Shot\-\_\-\-Up@{Shot\-\_\-\-Up}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Shot\-\_\-\-Up}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Shot\-\_\-\-Up (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_slave___driver_8c_a396ee1d9a315c9d12806838cb416ddf8}
+\hypertarget{_slave___driver_8c_acda112be0bf335d094cfc8e9854a5285}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Side\-\_\-\-Acti@{Side\-\_\-\-Acti}}
+\index{Side\-\_\-\-Acti@{Side\-\_\-\-Acti}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Side\-\_\-\-Acti}]{\setlength{\rightskip}{0pt plus 5cm}void Side\-\_\-\-Acti (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_slave___driver_8c_acda112be0bf335d094cfc8e9854a5285}
+\hypertarget{_slave___driver_8c_a3c0d2a4492c17d656437f3fac3a6631d}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Side\-\_\-\-On@{Side\-\_\-\-On}}
+\index{Side\-\_\-\-On@{Side\-\_\-\-On}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Side\-\_\-\-On}]{\setlength{\rightskip}{0pt plus 5cm}void Side\-\_\-\-On (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_slave___driver_8c_a3c0d2a4492c17d656437f3fac3a6631d}
+\hypertarget{_slave___driver_8c_a98351f31a1f5ea244ca7426a47a7ae93}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!System\-\_\-\-Indicater@{System\-\_\-\-Indicater}}
+\index{System\-\_\-\-Indicater@{System\-\_\-\-Indicater}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{System\-\_\-\-Indicater}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char System\-\_\-\-Indicater (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{Color, }
+\item[{unsigned char}]{Led\-Stat, }
+\item[{unsigned char}]{Brightness}
+\end{DoxyParamCaption}
+)}}\label{_slave___driver_8c_a98351f31a1f5ea244ca7426a47a7ae93}
+\hypertarget{_slave___driver_8c_a6e55d25e76a9d2ff6b54df0b57854739}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!System\-\_\-\-Indicater2@{System\-\_\-\-Indicater2}}
+\index{System\-\_\-\-Indicater2@{System\-\_\-\-Indicater2}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{System\-\_\-\-Indicater2}]{\setlength{\rightskip}{0pt plus 5cm}void System\-\_\-\-Indicater2 (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{data1, }
+\item[{unsigned char}]{data2, }
+\item[{unsigned char}]{data3, }
+\item[{unsigned char}]{data4, }
+\item[{unsigned char}]{data5}
+\end{DoxyParamCaption}
+)}}\label{_slave___driver_8c_a6e55d25e76a9d2ff6b54df0b57854739}
+
+
+\subsection{変数詳解}
+\hypertarget{_slave___driver_8c_a31836e78143e86b37d18e83f435fdcf3}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Lair@{Lair}}
+\index{Lair@{Lair}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Lair}]{\setlength{\rightskip}{0pt plus 5cm}bit Lair}}\label{_slave___driver_8c_a31836e78143e86b37d18e83f435fdcf3}
+\hypertarget{_slave___driver_8c_a54a897fedcd75108d9b703b0f409ad23}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Lock@{Lock}}
+\index{Lock@{Lock}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Lock}]{\setlength{\rightskip}{0pt plus 5cm}bit Lock}}\label{_slave___driver_8c_a54a897fedcd75108d9b703b0f409ad23}
+\hypertarget{_slave___driver_8c_a626a07f22830b5af687c17e7c08f245b}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Lock\-\_\-\-Flg@{Lock\-\_\-\-Flg}}
+\index{Lock\-\_\-\-Flg@{Lock\-\_\-\-Flg}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Lock\-\_\-\-Flg}]{\setlength{\rightskip}{0pt plus 5cm}bit Lock\-\_\-\-Flg}}\label{_slave___driver_8c_a626a07f22830b5af687c17e7c08f245b}
+\hypertarget{_slave___driver_8c_a12dd8a4d2d8efdfc6f57bc1518e6f468}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Lwait@{Lwait}}
+\index{Lwait@{Lwait}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Lwait}]{\setlength{\rightskip}{0pt plus 5cm}bit Lwait}}\label{_slave___driver_8c_a12dd8a4d2d8efdfc6f57bc1518e6f468}
+\hypertarget{_slave___driver_8c_a6b715b6b7dd860db8440672a0ca1327a}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!phase@{phase}}
+\index{phase@{phase}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{phase}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char phase}}\label{_slave___driver_8c_a6b715b6b7dd860db8440672a0ca1327a}
+\hypertarget{_slave___driver_8c_aecf7de3156e8278fe9576be67d74744d}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Sair@{Sair}}
+\index{Sair@{Sair}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Sair}]{\setlength{\rightskip}{0pt plus 5cm}bit Sair}}\label{_slave___driver_8c_aecf7de3156e8278fe9576be67d74744d}
+\hypertarget{_slave___driver_8c_aa9b46b7907b533543248320e078e6f94}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Sdair@{Sdair}}
+\index{Sdair@{Sdair}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Sdair}]{\setlength{\rightskip}{0pt plus 5cm}bit Sdair}}\label{_slave___driver_8c_aa9b46b7907b533543248320e078e6f94}
+\hypertarget{_slave___driver_8c_ad10daf33352b177e9139372c43839736}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Sdwait@{Sdwait}}
+\index{Sdwait@{Sdwait}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Sdwait}]{\setlength{\rightskip}{0pt plus 5cm}bit Sdwait}}\label{_slave___driver_8c_ad10daf33352b177e9139372c43839736}
+\hypertarget{_slave___driver_8c_acf3244c673f0315179aa0689ccf084cf}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Shot\-\_\-\-Flg@{Shot\-\_\-\-Flg}}
+\index{Shot\-\_\-\-Flg@{Shot\-\_\-\-Flg}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Shot\-\_\-\-Flg}]{\setlength{\rightskip}{0pt plus 5cm}bit Shot\-\_\-\-Flg}}\label{_slave___driver_8c_acf3244c673f0315179aa0689ccf084cf}
+\hypertarget{_slave___driver_8c_ab13a7dbb446218689b1f9be651cacab7}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Side\-\_\-count@{Side\-\_\-count}}
+\index{Side\-\_\-count@{Side\-\_\-count}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Side\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Side\-\_\-count}}\label{_slave___driver_8c_ab13a7dbb446218689b1f9be651cacab7}
+\hypertarget{_slave___driver_8c_ad47fab0a72a4dacda43b7ab7954a3737}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Side\-\_\-\-Flg@{Side\-\_\-\-Flg}}
+\index{Side\-\_\-\-Flg@{Side\-\_\-\-Flg}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Side\-\_\-\-Flg}]{\setlength{\rightskip}{0pt plus 5cm}bit Side\-\_\-\-Flg}}\label{_slave___driver_8c_ad47fab0a72a4dacda43b7ab7954a3737}
+\hypertarget{_slave___driver_8c_a24193f838beec5538c319082406e95d6}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Sservo@{Sservo}}
+\index{Sservo@{Sservo}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Sservo}]{\setlength{\rightskip}{0pt plus 5cm}bit Sservo}}\label{_slave___driver_8c_a24193f838beec5538c319082406e95d6}
+\hypertarget{_slave___driver_8c_a4b23cf26434ca9ed614ec97f3cf59099}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Swait@{Swait}}
+\index{Swait@{Swait}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Swait}]{\setlength{\rightskip}{0pt plus 5cm}bit Swait}}\label{_slave___driver_8c_a4b23cf26434ca9ed614ec97f3cf59099}
+\hypertarget{_slave___driver_8c_aeaa5322781d08d122fa03aec0ba434db}{\index{Slave\-\_\-\-Driver.\-c@{Slave\-\_\-\-Driver.\-c}!Wait\-\_\-count@{Wait\-\_\-count}}
+\index{Wait\-\_\-count@{Wait\-\_\-count}!Slave_Driver.c@{Slave\-\_\-\-Driver.\-c}}
+\subsubsection[{Wait\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Wait\-\_\-count}}\label{_slave___driver_8c_aeaa5322781d08d122fa03aec0ba434db}

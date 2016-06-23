@@ -1,0 +1,147 @@
+\hypertarget{master__main_8c}{\section{master\-\_\-main.\-c ファイル}
+\label{master__main_8c}\index{master\-\_\-main.\-c@{master\-\_\-main.\-c}}
+}
+{\ttfamily \#include $<$htc.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}System.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}U\-A\-R\-T.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}I2\-C.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ctrl\-\_\-\-Dataformat.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Slave\-\_\-\-Driver.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Tmr0.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Tmr1.\-h\char`\"{}}\\*
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{master__main_8c_a024148e99a7143db044a48216664d03d}{\-\_\-\-X\-T\-A\-L\-\_\-\-F\-R\-E\-Q}~32000000
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{master__main_8c_a61b2aea8e4b8ee89313e1d26b17b31f1}{\-\_\-\-\_\-\-C\-O\-N\-F\-I\-G} (F\-O\-S\-C\-\_\-\-I\-N\-T\-O\-S\-C \&W\-D\-T\-E\-\_\-\-O\-N \&P\-W\-R\-T\-E\-\_\-\-O\-N \&M\-C\-L\-R\-E\-\_\-\-O\-F\-F \&C\-P\-\_\-\-O\-F\-F \&C\-P\-D\-\_\-\-O\-F\-F \&B\-O\-R\-E\-N\-\_\-\-O\-N \&C\-L\-K\-O\-U\-T\-E\-N\-\_\-\-O\-F\-F \&I\-E\-S\-O\-\_\-\-O\-F\-F \&F\-C\-M\-E\-N\-\_\-\-O\-F\-F \&W\-R\-T\-\_\-\-O\-F\-F \&V\-C\-A\-P\-E\-N\-\_\-\-O\-F\-F \&P\-L\-L\-E\-N\-\_\-\-O\-N \&S\-T\-V\-R\-E\-N\-\_\-\-O\-F\-F \&L\-V\-P\-\_\-\-O\-F\-F)
+\item 
+\hyperlink{master__main_8c_a5e748dd7ac2bd14f5b8603c655403800}{\-\_\-\-\_\-\-I\-D\-L\-O\-C} (1056)
+\item 
+void \hyperlink{master__main_8c_afc70164c232cee70941b16e3f2ca029a}{pic\-\_\-init} (void)
+\item 
+void \hyperlink{master__main_8c_a0e195c9f827c37d55920a942920de0f0}{putch} (char m)
+\item 
+void \hyperlink{master__main_8c_a8a6a5915cb45d514545fe87198bd8d8f}{Ctrl\-\_\-\-Main} (unsigned char $\ast$prcdat)
+\item 
+void \hyperlink{master__main_8c_a00a7ae12b0b5ddd038bc1fca50ebd916}{Led\-\_\-\-Flu} (void)
+\item 
+unsigned int \hyperlink{master__main_8c_af7bec00efab57f48103a6fa226e69e24}{Calu\-\_\-\-Speed} (signed char y)
+\item 
+void \hyperlink{master__main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{main} (void)
+\item 
+void interrupt \hyperlink{master__main_8c_a8968a8f1c5005d36f4cec1c152536463}{common\-\_\-inter} (void)
+\end{DoxyCompactItemize}
+\subsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{master__main_8c_a28706640140cc1c7d9cf809e302de19b}{Fp\-\_\-\-X}
+\item 
+int \hyperlink{master__main_8c_a04595b79e5abd764e54c03a399826bc5}{Fp\-\_\-\-Y}
+\item 
+unsigned char \hyperlink{master__main_8c_a6b715b6b7dd860db8440672a0ca1327a}{phase}
+\item 
+unsigned char \hyperlink{master__main_8c_af561fd578dbb57560c29c8cb102833cf}{Shot\-\_\-flg}
+\item 
+unsigned char \hyperlink{master__main_8c_a7a38559d0dcd966409ed9f14bd4a0888}{Zone\-Flag}
+\item 
+bit \hyperlink{master__main_8c_a7e750bfbfbd675b586435aac683519e4}{keepflag}
+\end{DoxyCompactItemize}
+
+
+\subsection{マクロ定義詳解}
+\hypertarget{master__main_8c_a024148e99a7143db044a48216664d03d}{\index{master\-\_\-main.\-c@{master\-\_\-main.\-c}!\-\_\-\-X\-T\-A\-L\-\_\-\-F\-R\-E\-Q@{\-\_\-\-X\-T\-A\-L\-\_\-\-F\-R\-E\-Q}}
+\index{\-\_\-\-X\-T\-A\-L\-\_\-\-F\-R\-E\-Q@{\-\_\-\-X\-T\-A\-L\-\_\-\-F\-R\-E\-Q}!master_main.c@{master\-\_\-main.\-c}}
+\subsubsection[{\-\_\-\-X\-T\-A\-L\-\_\-\-F\-R\-E\-Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-X\-T\-A\-L\-\_\-\-F\-R\-E\-Q~32000000}}\label{master__main_8c_a024148e99a7143db044a48216664d03d}
+
+
+\subsection{関数詳解}
+\hypertarget{master__main_8c_a61b2aea8e4b8ee89313e1d26b17b31f1}{\index{master\-\_\-main.\-c@{master\-\_\-main.\-c}!\-\_\-\-\_\-\-C\-O\-N\-F\-I\-G@{\-\_\-\-\_\-\-C\-O\-N\-F\-I\-G}}
+\index{\-\_\-\-\_\-\-C\-O\-N\-F\-I\-G@{\-\_\-\-\_\-\-C\-O\-N\-F\-I\-G}!master_main.c@{master\-\_\-main.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-C\-O\-N\-F\-I\-G}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-\-\_\-\-C\-O\-N\-F\-I\-G (
+\begin{DoxyParamCaption}
+\item[{F\-O\-S\-C\-\_\-\-I\-N\-T\-O\-S\-C \&W\-D\-T\-E\-\_\-\-O\-N \&P\-W\-R\-T\-E\-\_\-\-O\-N \&M\-C\-L\-R\-E\-\_\-\-O\-F\-F \&C\-P\-\_\-\-O\-F\-F \&C\-P\-D\-\_\-\-O\-F\-F \&B\-O\-R\-E\-N\-\_\-\-O\-N \&C\-L\-K\-O\-U\-T\-E\-N\-\_\-\-O\-F\-F \&I\-E\-S\-O\-\_\-\-O\-F\-F \&F\-C\-M\-E\-N\-\_\-\-O\-F\-F \&W\-R\-T\-\_\-\-O\-F\-F \&V\-C\-A\-P\-E\-N\-\_\-\-O\-F\-F \&P\-L\-L\-E\-N\-\_\-\-O\-N \&S\-T\-V\-R\-E\-N\-\_\-\-O\-F\-F \&}]{L\-V\-P\-\_\-\-O\-F\-F}
+\end{DoxyParamCaption}
+)}}\label{master__main_8c_a61b2aea8e4b8ee89313e1d26b17b31f1}
+\hypertarget{master__main_8c_a5e748dd7ac2bd14f5b8603c655403800}{\index{master\-\_\-main.\-c@{master\-\_\-main.\-c}!\-\_\-\-\_\-\-I\-D\-L\-O\-C@{\-\_\-\-\_\-\-I\-D\-L\-O\-C}}
+\index{\-\_\-\-\_\-\-I\-D\-L\-O\-C@{\-\_\-\-\_\-\-I\-D\-L\-O\-C}!master_main.c@{master\-\_\-main.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-I\-D\-L\-O\-C}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-\-\_\-\-I\-D\-L\-O\-C (
+\begin{DoxyParamCaption}
+\item[{1056}]{}
+\end{DoxyParamCaption}
+)}}\label{master__main_8c_a5e748dd7ac2bd14f5b8603c655403800}
+\hypertarget{master__main_8c_af7bec00efab57f48103a6fa226e69e24}{\index{master\-\_\-main.\-c@{master\-\_\-main.\-c}!Calu\-\_\-\-Speed@{Calu\-\_\-\-Speed}}
+\index{Calu\-\_\-\-Speed@{Calu\-\_\-\-Speed}!master_main.c@{master\-\_\-main.\-c}}
+\subsubsection[{Calu\-\_\-\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Calu\-\_\-\-Speed (
+\begin{DoxyParamCaption}
+\item[{signed char}]{y}
+\end{DoxyParamCaption}
+)}}\label{master__main_8c_af7bec00efab57f48103a6fa226e69e24}
+\hypertarget{master__main_8c_a8968a8f1c5005d36f4cec1c152536463}{\index{master\-\_\-main.\-c@{master\-\_\-main.\-c}!common\-\_\-inter@{common\-\_\-inter}}
+\index{common\-\_\-inter@{common\-\_\-inter}!master_main.c@{master\-\_\-main.\-c}}
+\subsubsection[{common\-\_\-inter}]{\setlength{\rightskip}{0pt plus 5cm}void interrupt common\-\_\-inter (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{master__main_8c_a8968a8f1c5005d36f4cec1c152536463}
+\hypertarget{master__main_8c_a8a6a5915cb45d514545fe87198bd8d8f}{\index{master\-\_\-main.\-c@{master\-\_\-main.\-c}!Ctrl\-\_\-\-Main@{Ctrl\-\_\-\-Main}}
+\index{Ctrl\-\_\-\-Main@{Ctrl\-\_\-\-Main}!master_main.c@{master\-\_\-main.\-c}}
+\subsubsection[{Ctrl\-\_\-\-Main}]{\setlength{\rightskip}{0pt plus 5cm}void Ctrl\-\_\-\-Main (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$}]{prcdat}
+\end{DoxyParamCaption}
+)}}\label{master__main_8c_a8a6a5915cb45d514545fe87198bd8d8f}
+\hypertarget{master__main_8c_a00a7ae12b0b5ddd038bc1fca50ebd916}{\index{master\-\_\-main.\-c@{master\-\_\-main.\-c}!Led\-\_\-\-Flu@{Led\-\_\-\-Flu}}
+\index{Led\-\_\-\-Flu@{Led\-\_\-\-Flu}!master_main.c@{master\-\_\-main.\-c}}
+\subsubsection[{Led\-\_\-\-Flu}]{\setlength{\rightskip}{0pt plus 5cm}void Led\-\_\-\-Flu (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{master__main_8c_a00a7ae12b0b5ddd038bc1fca50ebd916}
+\hypertarget{master__main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{\index{master\-\_\-main.\-c@{master\-\_\-main.\-c}!main@{main}}
+\index{main@{main}!master_main.c@{master\-\_\-main.\-c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}void main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{master__main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}
+\hypertarget{master__main_8c_afc70164c232cee70941b16e3f2ca029a}{\index{master\-\_\-main.\-c@{master\-\_\-main.\-c}!pic\-\_\-init@{pic\-\_\-init}}
+\index{pic\-\_\-init@{pic\-\_\-init}!master_main.c@{master\-\_\-main.\-c}}
+\subsubsection[{pic\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void pic\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{master__main_8c_afc70164c232cee70941b16e3f2ca029a}
+\hypertarget{master__main_8c_a0e195c9f827c37d55920a942920de0f0}{\index{master\-\_\-main.\-c@{master\-\_\-main.\-c}!putch@{putch}}
+\index{putch@{putch}!master_main.c@{master\-\_\-main.\-c}}
+\subsubsection[{putch}]{\setlength{\rightskip}{0pt plus 5cm}void putch (
+\begin{DoxyParamCaption}
+\item[{char}]{m}
+\end{DoxyParamCaption}
+)}}\label{master__main_8c_a0e195c9f827c37d55920a942920de0f0}
+
+
+\subsection{変数詳解}
+\hypertarget{master__main_8c_a28706640140cc1c7d9cf809e302de19b}{\index{master\-\_\-main.\-c@{master\-\_\-main.\-c}!Fp\-\_\-\-X@{Fp\-\_\-\-X}}
+\index{Fp\-\_\-\-X@{Fp\-\_\-\-X}!master_main.c@{master\-\_\-main.\-c}}
+\subsubsection[{Fp\-\_\-\-X}]{\setlength{\rightskip}{0pt plus 5cm}int Fp\-\_\-\-X}}\label{master__main_8c_a28706640140cc1c7d9cf809e302de19b}
+\hypertarget{master__main_8c_a04595b79e5abd764e54c03a399826bc5}{\index{master\-\_\-main.\-c@{master\-\_\-main.\-c}!Fp\-\_\-\-Y@{Fp\-\_\-\-Y}}
+\index{Fp\-\_\-\-Y@{Fp\-\_\-\-Y}!master_main.c@{master\-\_\-main.\-c}}
+\subsubsection[{Fp\-\_\-\-Y}]{\setlength{\rightskip}{0pt plus 5cm}int Fp\-\_\-\-Y}}\label{master__main_8c_a04595b79e5abd764e54c03a399826bc5}
+\hypertarget{master__main_8c_a7e750bfbfbd675b586435aac683519e4}{\index{master\-\_\-main.\-c@{master\-\_\-main.\-c}!keepflag@{keepflag}}
+\index{keepflag@{keepflag}!master_main.c@{master\-\_\-main.\-c}}
+\subsubsection[{keepflag}]{\setlength{\rightskip}{0pt plus 5cm}bit keepflag}}\label{master__main_8c_a7e750bfbfbd675b586435aac683519e4}
+\hypertarget{master__main_8c_a6b715b6b7dd860db8440672a0ca1327a}{\index{master\-\_\-main.\-c@{master\-\_\-main.\-c}!phase@{phase}}
+\index{phase@{phase}!master_main.c@{master\-\_\-main.\-c}}
+\subsubsection[{phase}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char phase}}\label{master__main_8c_a6b715b6b7dd860db8440672a0ca1327a}
+\hypertarget{master__main_8c_af561fd578dbb57560c29c8cb102833cf}{\index{master\-\_\-main.\-c@{master\-\_\-main.\-c}!Shot\-\_\-flg@{Shot\-\_\-flg}}
+\index{Shot\-\_\-flg@{Shot\-\_\-flg}!master_main.c@{master\-\_\-main.\-c}}
+\subsubsection[{Shot\-\_\-flg}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Shot\-\_\-flg}}\label{master__main_8c_af561fd578dbb57560c29c8cb102833cf}
+\hypertarget{master__main_8c_a7a38559d0dcd966409ed9f14bd4a0888}{\index{master\-\_\-main.\-c@{master\-\_\-main.\-c}!Zone\-Flag@{Zone\-Flag}}
+\index{Zone\-Flag@{Zone\-Flag}!master_main.c@{master\-\_\-main.\-c}}
+\subsubsection[{Zone\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Zone\-Flag}}\label{master__main_8c_a7a38559d0dcd966409ed9f14bd4a0888}

@@ -1,0 +1,122 @@
+\hypertarget{_u_a_r_t_8h}{\section{U\-A\-R\-T.\-h ファイル}
+\label{_u_a_r_t_8h}\index{U\-A\-R\-T.\-h@{U\-A\-R\-T.\-h}}
+}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_u_a_r_t_8h_aeb35262a1ab8b069985e16a70e30b768}{Scanf} (char $\ast$m, char $\ast$format,...)
+\item 
+unsigned char \hyperlink{_u_a_r_t_8h_ac77ab63980d6711ffb49d3696e2ea1ea}{Read\-Dat} (char $\ast$dat)
+\item 
+void \hyperlink{_u_a_r_t_8h_a40a0f858a446a4052604d28ebc0421e7}{Inter\-U\-A\-R\-T} (void)
+\item 
+void \hyperlink{_u_a_r_t_8h_a88885ea5c30f3481744204f2402461fb}{Init\-U\-A\-R\-T} (int rx, int tx, unsigned int brg)
+\item 
+void \hyperlink{_u_a_r_t_8h_afed4921516f71f9fb09a5b1a9b89cdf2}{U\-A\-R\-T\-\_\-\-Send} (const char $\ast$dt)
+\item 
+void \hyperlink{_u_a_r_t_8h_a1f8039a22a9508186a9bb026fedcff78}{U\-A\-R\-T\-\_\-\-Write} (char dt)
+\item 
+int \hyperlink{_u_a_r_t_8h_ae3c3450a2f267d5fc136bccc6e34cf79}{U\-A\-R\-T\-\_\-\-Available} ()
+\item 
+unsigned int \hyperlink{_u_a_r_t_8h_a9708e3e201846046809809d1cadb4dcc}{U\-A\-R\-T\-\_\-\-Read} ()
+\item 
+void \hyperlink{_u_a_r_t_8h_a7e00ace7e28bf972b623a07a5b2e8172}{U\-A\-R\-T\-\_\-\-Flush} ()
+\item 
+void \hyperlink{_u_a_r_t_8h_a758a68f5c487036ee419291b073ea657}{P\-W\-M\-\_\-\-Set\-\_\-\-Up} (void)
+\item 
+void \hyperlink{_u_a_r_t_8h_a56a2dbc42e70d7125f9267b14dc30be9}{Set\-Duty} (unsigned int duty\-\_\-ratio, char basyo)
+\item 
+void \hyperlink{_u_a_r_t_8h_a43ce96aa172ae30622533d974c6996ef}{Soft\-Ware\-P\-W\-M} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{関数詳解}
+\hypertarget{_u_a_r_t_8h_a88885ea5c30f3481744204f2402461fb}{\index{U\-A\-R\-T.\-h@{U\-A\-R\-T.\-h}!Init\-U\-A\-R\-T@{Init\-U\-A\-R\-T}}
+\index{Init\-U\-A\-R\-T@{Init\-U\-A\-R\-T}!UART.h@{U\-A\-R\-T.\-h}}
+\subsubsection[{Init\-U\-A\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}void Init\-U\-A\-R\-T (
+\begin{DoxyParamCaption}
+\item[{int}]{rx, }
+\item[{int}]{tx, }
+\item[{unsigned int}]{brg}
+\end{DoxyParamCaption}
+)}}\label{_u_a_r_t_8h_a88885ea5c30f3481744204f2402461fb}
+\hypertarget{_u_a_r_t_8h_a40a0f858a446a4052604d28ebc0421e7}{\index{U\-A\-R\-T.\-h@{U\-A\-R\-T.\-h}!Inter\-U\-A\-R\-T@{Inter\-U\-A\-R\-T}}
+\index{Inter\-U\-A\-R\-T@{Inter\-U\-A\-R\-T}!UART.h@{U\-A\-R\-T.\-h}}
+\subsubsection[{Inter\-U\-A\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}void Inter\-U\-A\-R\-T (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_u_a_r_t_8h_a40a0f858a446a4052604d28ebc0421e7}
+\hypertarget{_u_a_r_t_8h_a758a68f5c487036ee419291b073ea657}{\index{U\-A\-R\-T.\-h@{U\-A\-R\-T.\-h}!P\-W\-M\-\_\-\-Set\-\_\-\-Up@{P\-W\-M\-\_\-\-Set\-\_\-\-Up}}
+\index{P\-W\-M\-\_\-\-Set\-\_\-\-Up@{P\-W\-M\-\_\-\-Set\-\_\-\-Up}!UART.h@{U\-A\-R\-T.\-h}}
+\subsubsection[{P\-W\-M\-\_\-\-Set\-\_\-\-Up}]{\setlength{\rightskip}{0pt plus 5cm}void P\-W\-M\-\_\-\-Set\-\_\-\-Up (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_u_a_r_t_8h_a758a68f5c487036ee419291b073ea657}
+\hypertarget{_u_a_r_t_8h_ac77ab63980d6711ffb49d3696e2ea1ea}{\index{U\-A\-R\-T.\-h@{U\-A\-R\-T.\-h}!Read\-Dat@{Read\-Dat}}
+\index{Read\-Dat@{Read\-Dat}!UART.h@{U\-A\-R\-T.\-h}}
+\subsubsection[{Read\-Dat}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Read\-Dat (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dat}
+\end{DoxyParamCaption}
+)}}\label{_u_a_r_t_8h_ac77ab63980d6711ffb49d3696e2ea1ea}
+\hypertarget{_u_a_r_t_8h_aeb35262a1ab8b069985e16a70e30b768}{\index{U\-A\-R\-T.\-h@{U\-A\-R\-T.\-h}!Scanf@{Scanf}}
+\index{Scanf@{Scanf}!UART.h@{U\-A\-R\-T.\-h}}
+\subsubsection[{Scanf}]{\setlength{\rightskip}{0pt plus 5cm}int Scanf (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{m, }
+\item[{char $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{_u_a_r_t_8h_aeb35262a1ab8b069985e16a70e30b768}
+\hypertarget{_u_a_r_t_8h_a56a2dbc42e70d7125f9267b14dc30be9}{\index{U\-A\-R\-T.\-h@{U\-A\-R\-T.\-h}!Set\-Duty@{Set\-Duty}}
+\index{Set\-Duty@{Set\-Duty}!UART.h@{U\-A\-R\-T.\-h}}
+\subsubsection[{Set\-Duty}]{\setlength{\rightskip}{0pt plus 5cm}void Set\-Duty (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{duty\-\_\-ratio, }
+\item[{char}]{basyo}
+\end{DoxyParamCaption}
+)}}\label{_u_a_r_t_8h_a56a2dbc42e70d7125f9267b14dc30be9}
+\hypertarget{_u_a_r_t_8h_a43ce96aa172ae30622533d974c6996ef}{\index{U\-A\-R\-T.\-h@{U\-A\-R\-T.\-h}!Soft\-Ware\-P\-W\-M@{Soft\-Ware\-P\-W\-M}}
+\index{Soft\-Ware\-P\-W\-M@{Soft\-Ware\-P\-W\-M}!UART.h@{U\-A\-R\-T.\-h}}
+\subsubsection[{Soft\-Ware\-P\-W\-M}]{\setlength{\rightskip}{0pt plus 5cm}void Soft\-Ware\-P\-W\-M (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_u_a_r_t_8h_a43ce96aa172ae30622533d974c6996ef}
+\hypertarget{_u_a_r_t_8h_ae3c3450a2f267d5fc136bccc6e34cf79}{\index{U\-A\-R\-T.\-h@{U\-A\-R\-T.\-h}!U\-A\-R\-T\-\_\-\-Available@{U\-A\-R\-T\-\_\-\-Available}}
+\index{U\-A\-R\-T\-\_\-\-Available@{U\-A\-R\-T\-\_\-\-Available}!UART.h@{U\-A\-R\-T.\-h}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-Available}]{\setlength{\rightskip}{0pt plus 5cm}int U\-A\-R\-T\-\_\-\-Available (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_u_a_r_t_8h_ae3c3450a2f267d5fc136bccc6e34cf79}
+\hypertarget{_u_a_r_t_8h_a7e00ace7e28bf972b623a07a5b2e8172}{\index{U\-A\-R\-T.\-h@{U\-A\-R\-T.\-h}!U\-A\-R\-T\-\_\-\-Flush@{U\-A\-R\-T\-\_\-\-Flush}}
+\index{U\-A\-R\-T\-\_\-\-Flush@{U\-A\-R\-T\-\_\-\-Flush}!UART.h@{U\-A\-R\-T.\-h}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-Flush}]{\setlength{\rightskip}{0pt plus 5cm}void U\-A\-R\-T\-\_\-\-Flush (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_u_a_r_t_8h_a7e00ace7e28bf972b623a07a5b2e8172}
+\hypertarget{_u_a_r_t_8h_a9708e3e201846046809809d1cadb4dcc}{\index{U\-A\-R\-T.\-h@{U\-A\-R\-T.\-h}!U\-A\-R\-T\-\_\-\-Read@{U\-A\-R\-T\-\_\-\-Read}}
+\index{U\-A\-R\-T\-\_\-\-Read@{U\-A\-R\-T\-\_\-\-Read}!UART.h@{U\-A\-R\-T.\-h}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-Read}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int U\-A\-R\-T\-\_\-\-Read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_u_a_r_t_8h_a9708e3e201846046809809d1cadb4dcc}
+\hypertarget{_u_a_r_t_8h_afed4921516f71f9fb09a5b1a9b89cdf2}{\index{U\-A\-R\-T.\-h@{U\-A\-R\-T.\-h}!U\-A\-R\-T\-\_\-\-Send@{U\-A\-R\-T\-\_\-\-Send}}
+\index{U\-A\-R\-T\-\_\-\-Send@{U\-A\-R\-T\-\_\-\-Send}!UART.h@{U\-A\-R\-T.\-h}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-Send}]{\setlength{\rightskip}{0pt plus 5cm}void U\-A\-R\-T\-\_\-\-Send (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dt}
+\end{DoxyParamCaption}
+)}}\label{_u_a_r_t_8h_afed4921516f71f9fb09a5b1a9b89cdf2}
+\hypertarget{_u_a_r_t_8h_a1f8039a22a9508186a9bb026fedcff78}{\index{U\-A\-R\-T.\-h@{U\-A\-R\-T.\-h}!U\-A\-R\-T\-\_\-\-Write@{U\-A\-R\-T\-\_\-\-Write}}
+\index{U\-A\-R\-T\-\_\-\-Write@{U\-A\-R\-T\-\_\-\-Write}!UART.h@{U\-A\-R\-T.\-h}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-Write}]{\setlength{\rightskip}{0pt plus 5cm}void U\-A\-R\-T\-\_\-\-Write (
+\begin{DoxyParamCaption}
+\item[{char}]{dt}
+\end{DoxyParamCaption}
+)}}\label{_u_a_r_t_8h_a1f8039a22a9508186a9bb026fedcff78}
